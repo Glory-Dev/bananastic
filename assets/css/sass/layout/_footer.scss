@@ -1,0 +1,64 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 40px;
+  background-color: $secondary-black;
+  @include media(max-medium) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  > p {
+    line-height: 1.8;
+    color: $primary-white;
+    @include media(max-medium) {
+      text-align: center;
+    }
+  }
+  > .social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    @include media(max-medium) {
+      justify-content: center;
+    }
+
+    > li {
+      @extend %center-flex;
+      border-radius: 10px;
+
+      &:hover {
+        a {
+          i {
+            &[class*="facebook"] {
+              color: $facebook;
+            }
+            &[class*="youtube"] {
+              color: $youtube;
+            }
+            &[class*="whatsapp"] {
+              color: $whatsapp;
+            }
+            &[class*="linked"] {
+              color: $linked;
+            }
+          }
+          &:first-child {
+            color: $whatsapp;
+          }
+        }
+      }
+      a {
+        padding: 10px;
+        border-radius: 15px;
+        background-color: $primary-white;
+        transition: background-color 0.3s;
+        @extend %center-flex;
+        i {
+          font-size: 28px;
+          transition: color 0.3s;
+        }
+      }
+    }
+  }
+}

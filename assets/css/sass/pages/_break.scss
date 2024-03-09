@@ -1,0 +1,48 @@
+.break {
+  display: flex;
+  justify-content: space-evenly;
+
+  > div {
+    @include media(min-medium) {
+      width: calc((100% / 2) - 40px);
+    }
+  }
+  > .image {
+    img {
+    }
+  }
+  .order {
+    @include media(max-medium) {
+      display: none;
+    }
+    background: {
+      color: $secondary-dark-maginta;
+      image: url("../images/id/yellow.jpg");
+      size: contain;
+      position: center;
+    }
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > h4 {
+      font: {
+        size: 48px;
+        weight: 600;
+      }
+      margin-top: 0;
+      margin-bottom: 30px;
+      letter-spacing: -3px;
+      color: $primary-white;
+    }
+    > a {
+      padding: 15px;
+      font-size: 24px;
+      display: block;
+      width: fit-content;
+      color: $secondary-dark-maginta;
+      background-color: $primary-white;
+    }
+  }
+}

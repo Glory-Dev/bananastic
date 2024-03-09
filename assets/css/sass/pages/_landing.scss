@@ -1,0 +1,43 @@
+.landing {
+  min-height: 100vh;
+  position: relative;
+  background: {
+    image: url("../images/Banastic-IV.jpg");
+    size: cover;
+    position: center;
+  }
+
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 50%;
+    color: white;
+    padding: 40px;
+    transform: translateY(-50%);
+    background-color: rgba($primary-pink, 0.8);
+    @extend %center-flex;
+    flex-direction: column;
+    border-radius: 0 40px 40px 0;
+    @include media(max-small) {
+      width: 100%;
+      border-radius: 0;
+    }
+
+    > h2 {
+      margin: 0;
+      line-height: 1.5;
+      font-family: $gerbil;
+      text-transform: uppercase;
+      font-size: 3em;
+      @include media(max-medium) {
+        font-size: 2em;
+      }
+    }
+    > p {
+      @include media(min-medium) {
+        font-size: 22px
+      }
+    }
+  }
+}

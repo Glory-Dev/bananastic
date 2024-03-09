@@ -1,0 +1,52 @@
+.about {
+  padding: 80px 0;
+  background: {
+    image: url("../images/patterns/pattern.jpg");
+    size: cover;
+  }
+
+  .container {
+    @extend %between-flex;
+    align-items: start;
+    @include media(max-medium) {
+      flex-direction: column;
+    }
+
+    // Animation
+    // > * {
+    //   opacity: 0;
+    //   visibility: visible;
+    //   transition: all $long-duration;
+    // }
+  }
+
+  article {
+    border-bottom: 5px solid $primary-yellow;
+    @include media(min-medium) {
+      width: calc((100% / 2) - 50px);
+      &:first-of-type {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: -50px;
+          width: 5px;
+          height: 77%;
+          background-color: $primary-yellow;
+        }
+      }
+      border: none;
+    }
+
+    h3 {
+    }
+    p {
+      color: $secondary-dark-maginta;
+      @include media(min-medium) {
+        font-size: 22px;
+      }
+    }
+  }
+}

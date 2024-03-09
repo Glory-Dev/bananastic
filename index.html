@@ -2,62 +2,194 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BananaStic</title>
+    <meta name="description" content="" />
+    <meta property="og:title" content="Bananastic" />
+    <meta property="og:description" content="" />
+    <meta property="twitter:title" content="" />
+    <meta property="twitter:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="Startup" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- Font Awesome -->
     <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <title>Frontend Mentor | Four card feature section</title>
-    <link rel="stylesheet" href="style/main.css" />
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" sizes="32x32" type="image/png" href="assets/images/logo/icon-yellow.png" />
   </head>
   <body>
-    <div class="container">
-      <article class="head">
-        <h3>Reliable, efficient delivery</h3>
-        <h3 class="powered">Powered by Technology</h3>
-        <p>
-          Our Artificial Intelligence powered tools use millions of project data
-          points to ensure that your project is successful
-        </p>
-      </article>
-      <div class="content">
-        <section class="cards">
-          <section class="card-holder">
-            <div class="card super">
-              <h3>Supervisor</h3>
-              <p>Monitors activity to identify project roadblocks</p>
-              <img src="images/icon-supervisor.svg" alt="Icon" />
-            </div>
-          </section>
-          <section class="card-holder">
-            <div class="card team">
-              <h3>Team Builder</h3>
-              <p>
-                Scans our talent network to create the optimal team for your
-                project
-              </p>
-              <img src="images/icon-team-builder.svg" alt="Icon" />
-            </div>
-            <div class="card karma">
-              <h3>Karma</h3>
-              <p>Regularly evaluates our talent to ensure quality</p>
-              <img src="images/icon-karma.svg" alt="Icon" />
-            </div>
-          </section>
-          <section class="card-holder">
-            <div class="card calc">
-              <h3>Calculator</h3>
-              <p>
-                Uses data from past projects to provide better delivery
-                estimates
-              </p>
-              <img src="images/icon-calculator.svg" alt="Icon" />
-            </div>
-          </section>
-        </section>
+    <!-- Preloader -->
+    <div class="preloader"><div class="spin"></div></div>
+
+    <!-- Scroll-to-top -->
+    <span class="scroll-top"><i class="fas fa-angle-up"></i></span>
+
+    <!-- Start Header -->
+    <header class="header" id="header">
+      <div class="container">
+        <a href="#" class="logo"><img src="assets/images/logo/icon-white.png" alt="Logo" /></a>
+        <nav class="navbar">
+          <ul class="links">
+            <li><a href="#about" aria-label="Go to About section">About</a></li>
+            <li><a href="#values" aria-label="Go to Core Values section">Core Values</a></li>
+            <li><a href="#order" aria-label="Go to Skills section">Order</a></li>
+          </ul>
+          <i class="menu-icon"><span></span><span></span><span></span></i>
+        </nav>
       </div>
-    </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Landing -->
+    <section class="landing" id="landing">
+      <section class="text">
+        <h2>Bananastic</h2>
+        <p>
+          A startup project that aims to achieve sustainability and responsible production of the packaging industry, by offering eco-friendly packaging materials manufactured of banana tree wastes. Our products ideally equip the marketplace needs by
+          offering the premium quality, cost effectiveness, and successively obtaining the ability of acting as fertilizers after usage, which gives us an edge beyond our competitors.
+        </p>
+      </section>
+    </section>
+    <!-- End Landing -->
+    <!-- Start About -->
+    <section class="about" id="about">
+      <div class="container">
+        <article class="mission">
+          <h3 class="main-heading">
+            Our Mission
+            <bdi class="ar-heading">رسالتنـــــــــــا</bdi>
+          </h3>
+          <p>
+            We aim to transform the yields of the packaging materials production towards our environment from leaving a carbonated footprint to a positive impact. In order to achieve the goals of
+            <span class="gold">Egypt Vision 2030</span> (Sustainable cities and communities, Responsible consumption and production, Climate action, Life below water, and life on land)
+            <bdi class="ar-text">
+              هدفنـا إننـا نحـول إنتاج مواد التغليف من كونهـا بتعمل بصمة كربونية على البيئة إلى انها تسـيب لتأثير إيجابي. و دا علشـان نوصل لأهداف<span class="gold"> رؤية مصر ٢٠٣٠</span> (مدن ومجتمعات مسـتدامة، اسـتهلاك .(وإنتـاج مسـئول، عمـل مناخي،
+              حيـاة تحت الماء، وحياة على الأرض
+            </bdi>
+          </p>
+        </article>
+        <article class="vision">
+          <h3 class="main-heading">
+            Our Vision
+            <bdi class="ar-heading">رؤيتنـــــــــا</bdi>
+          </h3>
+          <p>
+            Leading the industry of packaging material production mainly in Egypt and then the middle east by <span class="gold">2030</span>, and offering a high quality product that meets our customers' needs and the environment rights on the
+            humanity.
+            <bdi class="ar-text">
+              احنـا هدفنـا نكـون الرائدين في مجال إنتاج مواد التغليف، بشـكل رئيسـي في مصر وبعدين في الشرق الأوسـط بحلول ،<span class="gold">٢٠٣٠</span> وبرده بنهـدف علطـول اننـا نقدم منتج عالي الجودة يلبـي احتياجات عملائنا .وحقـوق البيئة على البشرية
+            </bdi>
+          </p>
+        </article>
+      </div>
+    </section>
+    <!-- End About -->
+    <!-- Start Core Values -->
+    <section class="values" id="values">
+      <h3 class="main-heading">
+        Our Values
+        <bdi class="ar-heading">قيـــــــــــمنا</bdi>
+      </h3>
+      <div class="container">
+        <div class="box">
+          <div class="header">
+            <h4 class="main-heading">Environmental Friendliness</h4>
+            <i class="fa-solid fa-tree"></i>
+          </div>
+          <p>
+            Striving to save the environment of being harmed of toxicity, weather from the manufacture or after usage.
+            <bdi class="ar-text"> بنسـعى اننا نحافظ على شـفافية عالية فـي تقديم المعلومات عننـا وفـي التعامل مع عملائنا .وشركائنا </bdi>
+          </p>
+        </div>
+        <div class="box">
+          <div class="header">
+            <h4 class="main-heading">Quality</h4>
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <p>
+            Ensuring the delivery of high-quality packaging materials that acquires our customers preferences.
+            <bdi class="ar-text">بنسـتغل بطرق كتيره أحدث التكنولوجيا والابتكارات عشـان نعزز تجربة العملاء ونسـهل وصولنا ليهم بطرق التسـويق الرقمي</bdi>
+          </p>
+        </div>
+        <div class="box">
+          <div class="header">
+            <h4 class="main-heading">Innovation</h4>
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <p>
+            Seeking to fully leverage the latest technologies and innovations to enhance customer experience and facilitate digital marketing.
+            <bdi class="ar-text">لازم نضمـن انتـاج مواد تغليف عالية الجودة واللي بتناسـب ذوق عملائنا</bdi>
+          </p>
+        </div>
+        <div class="box">
+          <div class="header">
+            <h4 class="main-heading">Transparency</h4>
+            <i class="fa-regular fa-handshake"></i>
+          </div>
+          <p>
+            Maintaining high transparency in providing information and dealing with customers and partners.
+            <bdi class="ar-text">بنحـاول نحمـي البيئة من انها تتأذي بسـبب السـموم، سواء من .التصنيع أو حتى بعد الاسـتخدام</bdi>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End Core Values -->
+    <!-- Start Break -->
+    <section class="break">
+      <div class="image"><img src="assets/images/Banastic-II.jpg" alt="Cover" /></div>
+      <div class="order">
+        <h4>
+          Support climate action <br />
+          and local business
+        </h4>
+        <a href="#order">Order Now</a>
+      </div>
+    </section>
+    <!-- End Break -->
+    <!-- Start Order -->
+    <section class="order" id="order">
+      <h3 class="main-heading">
+        Order Now
+        <bdi class="ar-heading">اشتـــــــــريـ </bdi>
+      </h3>
+      <div class="container">
+        <form action="https://formspree.io/f/xyyrpjwp" method="POST">
+          <input type="text" name="name" placeholder="Your Name" />
+          <input type="email" name="email" placeholder="Your Email" />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <input type="submit" value="Order" />
+        </form>
+      </div>
+    </section>
+    <!-- End Order -->
+    <!-- Start Footer -->
+    <footer class="footer">
+      <p>Bananastic | &copy; Copyright 2023/2024 all rights reserved</p>
+      <ul class="social">
+        <li>
+          <a href="#" target="_blank" title="Linked in" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+        <li>
+          <a href="#" target="_blank" title="Facbeook" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/adham_1476/" target="_blank" title="Instagram" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="mailto:bananasticteam@gmail.com?subject=Contact" target="_blank" title="Gmail" rel="noopener noreferrer"><i class="fa fa-envelope"></i></a>
+        </li>
+      </ul>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- JS -->
+    <script src="assets/scripts/main.js"></script>
   </body>
 </html>

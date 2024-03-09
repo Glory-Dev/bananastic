@@ -1,0 +1,154 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  color: $primary-white;
+  background-color: $primary-pink;
+
+  .container {
+    @extend %between-flex;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+      height: 1px;
+      width: calc(100% - 30px);
+    }
+  }
+
+  .logo {
+    transform: translateX(-60px);
+    img {
+      height: 100px;
+    }
+    @include media(max-medium) {
+      transform: translateX(-30px);
+      img {
+        height: 70px;
+      }
+    }
+  }
+
+  .navbar {
+    @extend %center-flex;
+    position: relative;
+    margin-left: 30px;
+
+    .links {
+      @extend %center-flex;
+      @include media(min-medium) {
+        gap: 30px;
+      }
+      &.active {
+        top: calc(100% + 25px);
+        opacity: 1;
+        z-index: 999;
+        visibility: visible;
+      }
+
+      @include media(max-medium) {
+        position: absolute;
+        right: 0;
+        min-width: 150px;
+        flex-direction: column;
+        visibility: hidden;
+        z-index: 9999;
+        background-color: white;
+        box-shadow: 10px 10px 20px 0 #000;
+        // Animation
+        top: calc(100% + 30px);
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        transition: $duration;
+      }
+      li {
+        text-align: center;
+        position: relative;
+        @include media(max-medium) {
+          width: 100%;
+          &:not(:last-child) {
+            border-bottom: 1px solid black;
+          }
+          &::before {
+            @include overlay($primary-yellow, 1);
+            width: 0%;
+            transition: width $duration;
+          }
+          &:hover {
+            &::before {
+              width: 100%;
+              transition: width $duration;
+            }
+          }
+        }
+
+        a {
+          display: block;
+          padding: 20px 0;
+          font-size: 24px;
+          transition: color $duration;
+          color: rgba(white, 0.5);
+          &:hover {
+            color: white;
+          }
+          @include media(max-medium) {
+            color: $primary-yellow;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .menu-icon {
+      position: relative;
+      padding: 0;
+      width: 30px;
+      height: 22px;
+      cursor: pointer;
+      display: none;
+      @include media(max-medium) {
+        display: flex;
+        align-items: center;
+      }
+
+      span {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        display: block;
+        border-radius: 3px;
+        background-color: $primary-white;
+        transition: opacity 0s $duration, top $duration $duration, bottom $duration $duration, transform $duration;
+        &:first-child {
+          top: 0;
+        }
+        &:last-child {
+          bottom: 0;
+        }
+      }
+      // Animation
+      &.active {
+        span {
+          transition: opacity 0s $duration, top $duration, bottom $duration, transform $duration $duration;
+
+          &:first-child {
+            top: calc(50% - 1.5px);
+            transform: rotate(45deg);
+          }
+          &:last-child {
+            bottom: calc(50% - 1.5px);
+            transform: rotate(-45deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}

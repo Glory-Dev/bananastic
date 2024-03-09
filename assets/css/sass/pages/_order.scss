@@ -1,0 +1,33 @@
+.order {
+  padding: 50px 0;
+  form {
+    *:not(:last-child) {
+      display: block;
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+      width: 100%;
+      color: #333;
+      caret-color: var(--main-color, #00bcd4);
+    }
+
+    textarea {
+      height: 300px;
+    }
+    input[type="submit"] {
+      color: #fff;
+      padding: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      display: flex;
+      margin-left: auto;
+      text-transform: uppercase;
+      background-color: var(--main-color, #00bcd4);
+    }
+    input[type="submit"] {
+      display: block;
+      width: 15%;
+      font-size: 18px;
+    }
+  }
+}
